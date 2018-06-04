@@ -1,18 +1,18 @@
-<template>
-  <div>
-    <p>Hi from {{ name }}</p>
-    <nuxt-link to="/">Home page</nuxt-link>
-  </div>
+<template lang="pug">
+	div
+		p Hi from {{ name }}
+		nuxt-link(to="/") Home page
 </template>
 
 <script>
 export default {
-  layout: 'aqua',
-  asyncData({ req }) {
+  asyncData() {
     return {
-      name: req ? 'server' : 'client'
+      name: process.static ? 'static' : (process.server ? 'server' : 'client')
     }
+  },
+  head: {
+    title: 'About page'
   }
-  // name: 'Cat'
 }
 </script>
