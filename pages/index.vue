@@ -1,26 +1,8 @@
 <template lang="pug">
-  div.container
-    h1 Welcome!
-    nuxt-link(to="/about") Go to
+  div.content
+    h1.title Custom CSS!
+    p
+      nuxt-link.button.is-medium.is-primary.hvr-float-shadow(to="/about") I am a button
+    p
+      nuxt-link(to="/about") About page
 </template>
-
-<script>
-export default {
-  asyncData() {
-    return new Promise((resolve) => {
-      setTimeout(function () {
-        resolve({})
-      }, 1000)
-    })
-  }
-}
-</script>
-
-<style lang="sass" scoped>
-.container
-  font-size: 20px;
-  text-align: center;
-  padding-top: 100px;
-
-</style>
-

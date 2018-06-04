@@ -1,18 +1,8 @@
 <template lang="pug">
-	div
-		p Hi from {{ name }}
-		nuxt-link(to="/") Home page
+	div.content
+    h1.title Another Page
+    p
+      nuxt-link.button(to="/") Another button
+    p
+      nuxt-link(to="/") Back home
 </template>
-
-<script>
-export default {
-  asyncData() {
-    return {
-      name: process.static ? 'static' : (process.server ? 'server' : 'client')
-    }
-  },
-  head: {
-    title: 'About page'
-  }
-}
-</script>
