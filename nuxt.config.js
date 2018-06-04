@@ -1,6 +1,6 @@
-module.exports = {
-    loading: {
-      color: 'aqua',
-      height: '5px'
-    }
-  }
+// module.exports = {
+  //   loading: {
+  //     color: 'aqua',
+  //     height: '5px'
+  //   }
+  // }

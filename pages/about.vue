@@ -1,8 +1,16 @@
 <template lang="pug">
-	div.content
-    h1.title Another Page
-    p
-      nuxt-link.button(to="/") Another button
-    p
-      nuxt-link(to="/") Back home
+  div
+    p Hi from {{name}}
+    nuxt-link(to="/") Home page
 </template>
+
+<script>
+export default {
+  layout: 'dark',
+  asyncData({ req }) {
+    return {
+      name: req ? 'server' : 'client'
+    }
+  }
+}
+</script>
